@@ -2,9 +2,9 @@ using SQLiteDemo.ViewModels;
 
 namespace SQLiteDemo.Views;
 
-public partial class AddUpdateStudentDetail : ContentPage
+public partial class AddUpdateDeviceDetail : ContentPage
 {
-    public AddUpdateStudentDetail(AddUpdateStudentDetailViewModel viewModel)
+    public AddUpdateDeviceDetail(AddUpdateDeviceDetailViewModel viewModel)
     {
         InitializeComponent();
         this.BindingContext = viewModel;

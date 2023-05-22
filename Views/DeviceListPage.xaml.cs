@@ -2,10 +2,10 @@ using SQLiteDemo.ViewModels;
 
 namespace SQLiteDemo.Views;
 
-public partial class StudentListPage : ContentPage
+public partial class DeviceListPage : ContentPage
 {
-    private StudentListPageViewModel _viewMode;
-    public StudentListPage(StudentListPageViewModel viewModel)
+    private DeviceListPageViewModel _viewMode;
+    public DeviceListPage(DeviceListPageViewModel viewModel)
 	{
 		InitializeComponent();
         _viewMode = viewModel;
@@ -15,6 +15,6 @@ public partial class StudentListPage : ContentPage
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        _viewMode.GetStudentListCommand.Execute(null);
+        _viewMode.GetDeviceListCommand.Execute(null);
     }
 }

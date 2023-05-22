@@ -18,17 +18,17 @@ public static class MauiProgram
             });
 
         // Services
-        builder.Services.AddSingleton<IStudentService, StudentService>();
+        builder.Services.AddSingleton<IDeviceService, DeviceService>();
 
 
         //Views Registration
-        builder.Services.AddSingleton<StudentListPage>();
-        builder.Services.AddTransient<AddUpdateStudentDetail>();
+        builder.Services.AddSingleton<DeviceListPage>();
+        builder.Services.AddTransient<AddUpdateDeviceDetail>();
 
 
         //View Modles 
-        builder.Services.AddSingleton<StudentListPageViewModel>();
-        builder.Services.AddTransient<AddUpdateStudentDetailViewModel>();
+        builder.Services.AddSingleton<DeviceListPageViewModel>();
+        builder.Services.AddTransient<AddUpdateDeviceDetailViewModel>();
 
 
         return builder.Build();

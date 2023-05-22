@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SQLiteDemo.Views.AddUpdateStudentDetail"
-             Title="Add / Update Student Details">
+             x:Class="SQLiteDemo.Views.AddUpdateDeviceDetail"
+             Title="Add / Update Device Details">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -12,27 +12,25 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout Margin="10" Spacing="15">
+
         <VerticalStackLayout>
-            <Label Text="First Name"  />
-            <Entry Text="{Binding StudentDetail.FirstName}" Placeholder="First Name" />
+            <Label Text="Device Name" />
+            <Entry Text="{Binding DeviceDetail.DeviceName}" Placeholder="Device Name" />
             <BoxView HeightRequest="0.8" Color="Gray" />
         </VerticalStackLayout>
 
-
         <VerticalStackLayout>
-            <Label Text="Last Name" />
-            <Entry  Text="{Binding StudentDetail.LastName}" Placeholder="Last Name" />
+            <Label Text="Location"  />
+            <Entry Text="{Binding DeviceDetail.Location}" Placeholder="Location" />
             <BoxView HeightRequest="0.8" Color="Gray" />
         </VerticalStackLayout>
 
-
         <VerticalStackLayout>
-            <Label Text="Email" />
-            <Entry Text="{Binding StudentDetail.Email}" Placeholder="Email" />
+            <Label Text="Comment" />
+            <Entry  Text="{Binding DeviceDetail.Comment}" Placeholder="Comment" />
             <BoxView HeightRequest="0.8" Color="Gray" />
         </VerticalStackLayout>
 
-
-        <Button Text="Save" Command="{Binding AddUpdateStudentCommand}"/>
+        <Button Text="Save" Command="{Binding AddUpdateDeviceCommand}"/>
     </StackLayout>
 </ContentPage>

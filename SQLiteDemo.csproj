@@ -39,7 +39,7 @@
 		</MauiSplashScreen>
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<!--<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />-->
         <MauiImage Update="Resources\Images\splash.svg" BaseSize="208,208" />
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -73,10 +73,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\AddUpdateStudentDetail.xaml">
+	  <Compile Update="Views\AddUpdateDeviceDetail.xaml.cs">
+	    <DependentUpon>AddUpdateDeviceDetail.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\DeviceListPage.xaml.cs">
+	    <DependentUpon>DeviceListPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\AddUpdateDeviceDetail.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\StudentListPage.xaml">
+	  <MauiXaml Update="Views\DeviceListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace SQLiteDemo.SearchHandlers
 {
-    public class StudentSearchHandler : SearchHandler
+    public class DeviceSearchHandler : SearchHandler
     {
-        public IList<StudentModel> Students { get; set; }
+        public IList<DeviceModel> Devices { get; set; }
         public string NavigationRoute { get; set; }
         public Type NavigationType { get; set; }
         protected override void OnQueryChanged(string oldValue, string newValue)
@@ -22,7 +22,7 @@ namespace SQLiteDemo.SearchHandlers
             }
             else
             {
-                ItemsSource = Students.Where(student => student.FullName.ToLower().Contains(newValue.ToLower())).ToList();
+                ItemsSource = Devices.Where(Device => Device.FullName.ToLower().Contains(newValue.ToLower())).ToList();
             }
         }
 
@@ -30,7 +30,7 @@ namespace SQLiteDemo.SearchHandlers
         {
             base.OnItemSelected(item);
             var navParam = new Dictionary<string, object>();
-            navParam.Add("StudentDetail", item);
+            navParam.Add("DeviceDetail", item);
             if (!string.IsNullOrWhiteSpace(NavigationRoute))
             {
                 await Shell.Current.GoToAsync(NavigationRoute, navParam);
